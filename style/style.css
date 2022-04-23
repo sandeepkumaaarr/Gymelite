@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::selection{
+    background-color: #f36100;
+    color: white;   
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 62.5%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+h1,h2,h3{
+    font-size: 1.5rem;
+}
+p,a{
+    font-size: 1rem;
+}
+
+
+/* ################################################################   utility classes ####################################### */
+
+.txt-orange{
+    color: #f36100;
+}
+.container{
+    max-width: 90vw;
+    /* max-width: 90rem; */
+    width: 90%;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+
+}
+
+
+
+
+
+
+
+/* #########################################################header#################################################### */
+.logo{
+    letter-spacing: 0.3rem;
+   
+}
+.logo:hover{
+    background-color: #000000;
+}
+.logo a{
+    font-size: 1.8rem;
+}
+header{
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../img/main-bg.PNG");
+    /* border: 2px solid red; */
+    height: 95vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: center;
+
+}
+.navbar{
+    position: fixed;
+    /* width: 100%; */
+    /* top: 0; */
+    /* left: 4.5%; */
+    /* margin: 0 4.5rem; */
+    padding-top: 0.3rem;
+    height: 4rem;
+    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.455);
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    background-color: #323232;
+    padding: 1rem;
+    
+}
+
+.nav-items li{
+    display: inline-block;
+    /* border: 1px solid white; */
+    padding: 0.4rem;
+    margin: 0 0.3rem;
+    /* height: 3rem; */
+}
+
+.nav-items li a{
+   /* border: 1px solid green; */
+   display: inline-block;
+   padding-bottom:0.3rem;
+   /* height: 100%; */
+   font-weight:600;
+   transition: color 0.2s ease-in-out;
+}
+.nav-items li a:hover{
+    border-bottom: 2px solid white;
+    /* text-shadow: whitesmoke; */
+ }
+.nav-items li a:hover{
+    color: #f36100;
+}
+.icons span{
+    /* border: 2px solid red; */
+    display: inline-block;
+    /* margin-top: 0.7rem; */
+    margin: 0.3rem 0.3rem;
+}
+.icons span a{
+    /* border: 2px solid yellow; */
+}
+.icons span a i{
+    /* border: 2px solid pink; */
+    transition: color 0.2s ease-in;
+}
+.icons span a i:hover{
+    color: #f36100;
+}
+
+.header-container{
+    /* border: 1px solid red; */
+    /* position: relative; */
+    /* max-width: 50rem; */
+    left: -25%;
+    opacity: 0;
+    height: 95vh;
+    position: relative;
+    animation-name: headerchange;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+@keyframes headerchange{
+    100%{
+        opacity: 1;
+        left: 0;
+    }
+}
+.header-content{
+    /* max-width: 50rem; */
+    padding: 1rem;
+    /* background: #0000008f; */
+    /* border: 1px solid yellow; */
+    /* box-shadow: 0px 0px 20px 0px #f361008a ; */
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.mainp{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.mainh1{
+    font-size: 4.5rem;
+}
+.getinfo{
+    border: none;
+    outline: none;
+    padding: 0.5em;
+    margin: 0.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: #f36100;
+    color: white;
+    border-radius: 0.2rem;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid white;
+
+}
+.getinfo:hover{
+    color: #f36100;
+    background-color: white;
+    border: 2px solid #f36100;
+}
+.strong{
+    color: #f36100;
+}
+
+
+/* ######################################################### section choose us ############################################ */
+.chooseus{
+    background-color: #242424;
+    /* margin: 2rem 0; */
+    border: 1px solid black;
+    /* color: black; */
+    text-align: center;
+}
+.chooseus-content{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+   
+    /* border: 1px solid yellow; */
+}
+
+
+.chooseh1{
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    color: #f36100;
+}
+.chooseus-card{
+    
+    /* border: 2px solid #f36100; */
+    border-radius: 0.3rem;
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    /* width: 25%; */
+}
+.chooseus-card span{
+    /* transition: all 2s ease-in; */
+    position: relative;
+    padding: 3rem;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #424242;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.626);
+    /* width: 5rem; */
+    /* border: 1px solid rgb(244, 10, 49); */
+}
+.chooseus-card span i{
+    transition: all 0.2s ease-in-out;
+    /* border: 1px solid yellowgreen; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.chooseus-card p{
+    color: rgb(148, 148, 148);
+}
+.chooseus-card .card{
+    margin: 0.4rem;
+    padding: 1rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* width:10%; */
+    width: 20rem;
+    background-color: rgb(50, 50, 50);
+    /* border-radius: 0.3rem; */
+    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+    /* border: 2px solid #f36100; */
+    border-radius: 0.3rem;
+}
+.chooseus-card p{
+    /* border: 1px solid red; */
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #a2a2a2;
+}
+.chooseus-card h1{
+    color: #f36100;
+}
+.card h1{
+    margin-bottom: 1rem;
+}
+
+.chooseus-card span:hover{
+    color: #f36100;
+    background: #fff;
+    /* transform: rotate(360deg); */
+}
+
+
+/* ##################################################section classess############################################ */
+
+.classes{
+    border: 1px solid rgb(25, 25, 25);;
+    /* text-align: center; */
+    background: rgb(25, 25, 25);
+}
+.classes-content{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+.classes-card{
+    /* border: 1px solid green; */
+    display: flex;
+    flex-wrap: wrap;
+}
+.classes-card-img img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.2rem;
+}
+.classes-card-img{
+    margin: 1rem;
+    /* border: 1px solid yellow; */
+    flex: 1 1 20rem;
+    width: 25rem;
+    height: 23rem;
+    position: relative;
+    /* border-radius: 1rem; */
+    /* z-index: 2; */
+}
+.classes-card-img::after{
+    content: "";
+    display: block;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* bottom: 0; */
+    width: 100%;
+    height: 100%;
+    border-top: 6px solid grey;
+    background: #00000050;
+    /* transform: skewy(50deg); */
+
+}
+.classes-card-img .img-content{
+    padding-top: 19rem;
+    position: absolute;
+    top: 0;
+    /* bottom: 0; */
+    left: 0;
+    /* border: 1px solid yellow; */
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.2s;
+}
+.classes-card-img .img-content:hover{
+    opacity: 1;
+}
+
+
+
+/* ######################################################### appoint ############################################ */
+.appoint{
+    /* border: 1px solid red; */
+   
+}
+.appoint .img-appoint img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+.appoint .img-appoint{
+    /* border: 8px solid green; */
+    width: 100%;
+    height: 30rem;
+    position: relative;
+    
+}
+.img-appoint::after{
+    content: "";
+    /* border: 2px solid white; */
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.611);
+}
+
+.appoint-text{
+    /* color: black; */
+    text-align: center;
+    /* border: 2px solid white; */
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    width: 70%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    transition: all 0.2s;
+
+}
+.appoint :hover{
+    text-shadow: 3px 3px 20px orangered;
+}
+
+/* ############################################### price card ####################################################### */
+.price{
+    /* border: 1px solid red; */
+    display: flex ;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* height: 20rem; */
+}
+.price-card{
+    color: white;
+    margin: 1rem 1rem;
+    /* border: 1px solid white; */
+    text-align: center;
+    width: 19rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: rgb(50, 50, 50);
+    border-radius: 0.3rem;
+    box-shadow: 0px 0px 10px 0px black;
+    transition: all 0.2s;
+}
+.price-card p{
+    /* border: 1px solid red; */
+    margin: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #b9b9b9;
+}
+.price-card h1{
+    margin-top: 1rem;
+    color: #f36100;
+    font-size: 3rem;
+}
+.price-card h3{
+    margin-top: 0.5rem;
+}
+.price-card button{
+    margin: 1rem 0;
+}
+.price-card:hover{
+    background: white;
+}
+.price-card:hover p{
+    color: black;
+    font-weight: 500;
+}
+.price-card:hover h3{
+    color: #242424;
+}
+
+/* ############################################ footerup ############################################################# */
+.footerup{
+    /* margin-top: 4rem; */
+    background-color:#242424;
+    /* color:; */
+}
+.footer-container{
+    /* border: 1px solid red; */
+    padding-top: 2rem;    
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-box{
+    margin: 0 0.3rem;
+    padding: 1rem;
+    /* border: 1px solid white; */
+    width: 27rem;
+    border-radius: 0.3rem;
+    background: #323232;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 0px 10px 2px rgba(19, 19, 19, 0.626);
+}
+.footer-box p{
+    display: inline-block;
+    /* border: 1px solid yellow; */
+    text-align: center;
+    padding: 0.3rem;
+}
+.footer-box span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    /* border: 1px solid red; */
+    height: 5rem;
+    width: 5rem;
+    background-color: #424242;
+    border-radius: 50%;
+    display:inline-block ;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.626);
+    transition: all 0.2s;
+
+}
+.footer-box:hover span{
+    color: #f36100;
+    background: white;
+}
+.footer-box  i{
+    display: inline-block;
+
+    text-align: center;
+    /* padding-left: 0.3rem; */
+    /* border: 1px solid white; */
+    width: 3rem;
+}
+/* ########################################## media queries ######################################################## */
+
+@media (min-width:501px)  and (max-width:1075px) {
+    html{
+        font-size: 75%;
+    }
+}
+@media (min-width:651px)  and (max-width:812px) {
+    html{
+        font-size: 60%;
+    }
+}
+@media (max-width:650px) {
+    html{
+        font-size: 50%;
+    }
+    .logo{
+        display: none;
+    }
+    .icons{
+        display: none;
+    }
+    .nav-items{
+        margin: 0 auto;
+    }
+}
+@media print{
+    img{
+        display: none;
+    }
+}
