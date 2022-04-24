@@ -84,6 +84,89 @@ header{
     padding: 1rem;
     
 }
+.hemburger{
+    display: inline-block;
+    /* border: 1px solid yellow; */
+    height: 35px;
+    position: relative;
+    display: none;
+    margin-top: -1rem;
+}
+.hemburger .span-div{
+    padding: 0.4rem;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background: #ffafaf; */
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: -2;
+    /* opacity: 0; */
+}
+.hemburger .span-div span{
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 0.3rem;
+    
+    
+}
+.hemburger input{
+    /* border: none; */
+    /* border: 5px solid red; */
+    /* display: none; */
+    display: inline-block;
+    width: 30px;
+    height: 35px;
+    z-index: 10;
+    opacity: 0;
+}
+.hemburger-items{
+    text-align: left;
+    position: absolute;
+    /* border: 1px solid red; */
+    /* display: none; */
+    width: 200px;
+    height: 100vh;
+    padding-top: 70px;
+    background: #000000;
+    margin-top: -30px;
+    top: 0;
+    /* right: 0; */
+    /* transform: translate(100%); */
+    /* left: 100px; */
+    z-index: -10;
+    
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in-out ;
+
+}
+
+.hemburger-items li{
+    padding: 0.5rem;
+}
+
+.hemburger input[type="checkbox"]:checked ~ .hemburger-items{
+    display: block;
+    /* left: -100px; */
+    transform: translateX(-50%);
+    /* transition: transform 1s; */
+} 
+.hemburger .hemburger-items .row1{
+    transform-origin: 0% 0%;
+}
+.hemburger .hemburger-items .row3{
+    transform-origin: 0% 100%;
+}
+.hemburger input[type="checkbox"]:checked ~ .hemburger-items .row1{
+    transform: rotate(45deg);
+}
 
 .nav-items li{
     display: inline-block;
@@ -512,30 +595,31 @@ header{
 }
 /* ########################################## media queries ######################################################## */
 
-@media (min-width:501px)  and (max-width:1075px) {
+@media (max-width:840px) {
+    html{
+        font-size: 60%;
+    }
+    .logo{
+        text-align: center;
+        /* display: none; */
+    }
+    .icons{
+        display: none;  
+    }
+
+    .nav-items{
+        display: none;
+    }
+    .hemburger{
+        display: block;
+    }
+}
+@media (min-width:840px)  and (max-width:1115px) {
     html{
         font-size: 75%;
     }
 }
-@media (min-width:651px)  and (max-width:812px) {
-    html{
-        font-size: 60%;
-    }
-}
-@media (max-width:650px) {
-    html{
-        font-size: 50%;
-    }
-    .logo{
-        display: none;
-    }
-    .icons{
-        display: none;
-    }
-    .nav-items{
-        margin: 0 auto;
-    }
-}
+
 @media print{
     img{
         display: none;
